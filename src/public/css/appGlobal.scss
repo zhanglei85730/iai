@@ -1,0 +1,75 @@
+@import 'global.scss';
+//链接颜色
+a.common-link-white:link, a.common-link-white:visited,a.common-link-white:hover{
+    color:#fff;
+}
+a.common-link-gray:link,a.common-link-gray:visited,a.common-link-gray:hover{
+    color:#8B8E99
+  
+}
+a.common-link-blue:link, a.common-link-blue:visited,a.common-link-blue:hover{
+    color:$commonColorBlur;
+}
+.data-show-split {
+    display: inline-block;
+    height: 0.5rem;
+    width: 0.03rem;
+    border-left: 1px solid #555;
+    transform: rotate(20deg);
+    position: relative;
+    top: 6px;
+    margin-left: 0.2rem;
+    margin-right:0.2rem
+}
+.common-page-body{
+    margin-top:$headTopHeight;
+    padding-top:0.4rem
+}
+.common-bg-dark {
+    // min-height: 100vh;
+    background: #2e2e3b;
+    box-sizing:content-box;
+    // overflow: hidden;
+}
+.custom-element-confirm{
+    background:#2e2e3b!important
+}
+// 计算px to rem
+// @function rem($pxValue) { 
+//     @return ($pxValue/50); 
+//   }
+// 通用输入框
+// .common-input-box{
+//     border-bottom:1px solid #5c5c5f;
+//     display: flex;
+//     font-size:0.3rem;
+//     margin-bottom:0.3rem;
+//     .common-input-label{
+//       padding: 10px;
+//       padding-left:0;
+//       color:#8B8E99;
+//       width: 1rem;
+//       display: block;
+//     }
+//     .common-input-right{
+//       flex:1
+//     }
+//     .common-input{
+//       padding: 10px;
+//       width: 100%;
+//       outline: none;
+//       box-sizing: border-box;
+//       display: block;
+//       background: none;
+//       color:#9797be
+//     }
+// }
+// .login-form-box{
+//     .common-input-box{
+//         border-color:$commonFsColorDarkGray
+//     }
+//     .common-input-label{
+//         width:0.6rem!important;
+//     }
+// }
+

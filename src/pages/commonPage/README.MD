@@ -1,0 +1,1 @@
+commonPage是公共页面，app、mobile、warning 三个模块都需要用的模块，比如：登录、注册等的页面

@@ -1,0 +1,602 @@
+//  csszz中背景图片路径问题
+@function urlPrefix($url){
+  // 生产环境
+    // @return url('/warning/'+$url);
+    // dev环境
+    // @return url('/'+$url)
+    // 通用
+    @return url('~'+$url);
+  };
+
+//---------
+// input高
+$commonInputHeight:1rem;
+$headerHeight:0.88rem;
+$appStatuBarHeight:0.4rem;
+//边距
+$commonSpace:0.28rem;
+$commonSpace2:0.4rem;
+// 圆角
+$commonRadius:0.08rem;
+$fontBold:900;
+// 通用样式
+$headTopHeight:2rem;
+// 边框
+$commonBorderWidth:1px;
+// 字体大小
+$commonFsBig:0.65rem;
+// header 头部字体大小
+$commonFsBigMedium:0.4rem;
+$commonFsTitle:0.4rem;
+$commonFsTitleMedium:0.36rem;//最大( 标题、button)
+$commonFsContent:0.32rem;//正文
+$commonFsMinContent:0.3rem;//小正文
+$commonFsMedium:0.28rem;
+$commonFsSmallMedium:0.26rem;
+$commonFsSmall:0.24rem;//最小
+$commonFsButton:0.4rem;
+// line-height
+$commonLineHeight01:0.55rem;
+$commonBackgroundDark:#2E2E3B;
+// 蓝色
+$commonColorBlur:#5291FF;
+$commonFsColorGray:#8B8E99;
+$commonColorDarkBalck:#24242E;
+$commonFsColorDarkGray:#3D3D4D;
+$commonOrgange:#e8c409;
+$commonFsColorRed:#D95757;
+$commonFsColorRed2:#DD4A4A;
+$commonFsDarkColor:#575766;
+$commonFsGreenColor:#83B36B;
+$commonFsColorGray2:#797D8C;
+// 文字前景颜色（深色背景用）
+$commonForeFontColor:#fff;
+//边框颜色
+$commonBorderColor:#3D3D4D;
+$contentLineHeight:$commonFsContent/0.6;
+// 涨/成功
+$commonSuccessColor: #7ACC7A;
+// 跌/失败
+$commonFailColor: #FF6666;
+
+button,input{
+  &:focus,
+  &:active:focus,
+  &.active:focus,
+  &.focus,
+  &:active.focus,
+  &.active.focus {
+    outline: none;
+    border-color: transparent;
+    box-shadow:none;
+  }
+}
+.common-visible-text{
+  font-size: 0;
+}
+// placeholder 颜色
+input::-webkit-input-placeholder {
+    color: $commonFsDarkColor!important;
+    font-weight: normal!important;
+    // font-size:0.26rem
+ }
+//
+.common-split-line{
+  height:1px;
+  background:$commonBorderColor;
+  font-size:0;
+  overflow: hidden;
+  width:100%
+}
+// 弹框
+.common-popup-container{
+  // background-color:$commonBackgroundDark;
+  background-color:#2E2E3B;
+  border-radius: 8px;
+  .common-popup-footer{
+      display: flex;
+      width:100%;
+      .common-popup-footer-btn:first-child{
+          border-left:none;
+          border-right:none
+      }
+      .common-popup-footer-btn:last-child{
+          border-right:none
+      }
+
+  }
+  .common-popup-content{
+      // width:84%;
+      margin:0 0.4rem
+  }
+  .common-popup-footer-btn{
+      height:50px;
+      line-height: 50px;
+      text-align: center;
+      color:$commonFsColorGray;
+      flex: 1;
+      // border:1px solid $commonFsColorDarkGray;
+      border:1px solid $commonFsColorDarkGray;
+      border-bottom:none;
+      font-size:$commonFsTitleMedium
+  }
+  .common-popup-title{
+      color:#fff;
+      // height:84px;
+      // line-height: 76px;
+      text-align: center;
+      font-size: $commonFsTitleMedium;
+      font-weight:bold;
+      padding:0.42rem 0 0.4rem 0
+  }
+  .common-popup-title-token{
+    padding-bottom:0.18rem
+  }
+  .common-auth-description{
+    color:#fff;
+    font-size:$commonFsMedium;
+    width:4.6rem;
+    max-width:300px;
+    text-align:left;
+    margin-left:auto;
+    margin-right:auto;
+    line-height: 0.42rem;
+    margin-top:0.2rem;
+  }
+  .common-popup-footer-active-btn{
+      color:$commonColorBlur;
+      font-weight: bold
+  }
+  .login-form-tip {
+    color: #8b8e99;
+    font-size: $commonFsSmall;
+    padding: 10px 0;
+    margin-top:0.28rem;
+}
+}
+/**/
+.common-align-ceter{
+  text-align: center
+}
+//头部右边用户图标
+.common-header-right-icon{
+  height:0.46rem;
+  // margin-top:0.5rem
+}
+// 通用输入框
+.common-input-box{
+  border-bottom:1px solid $commonBorderColor;
+  display: flex;
+  height: 1rem;
+  .common-input-label{
+    padding-left:0;
+    color:#fff;
+    height: 1rem;
+    line-height: 1rem;
+    min-width:0.64;
+    display: block;
+    font-size:$commonFsContent;
+  }
+  .common-input-label-width-3words{
+    width:0.96rem
+  }
+  .common-input-right{
+    flex:1;
+  }
+  .common-input{
+    padding: 0.18rem;
+    width: 100%;
+    outline: none;
+    box-sizing: border-box;
+    display: block;
+    background: none;
+    color:$commonFsColorGray;
+    padding-top:0.5rem;
+    padding-bottom:0.5rem;
+    height:0.5rem;
+    line-height:0.5rem;
+    font-weight: bold
+  }
+}
+// cube tab自定义样式
+.cube-tab-bar-slider{
+  background:none!important
+}
+.cube-popup-mask{
+  background-color: #000 !important;
+  opacity:0.7 !important;
+}
+.cube-dialog-main {
+  width: 5.5rem !important;
+}
+.cube-tab-bar-slider:after {
+  content: ' ';
+  display: block;
+  background: #fdfdfd;
+  height: 2px;
+  width: 36px;
+  text-align: center;
+  margin: 0 auto;
+}
+
+// tab菜单 滚动调滚动固定
+.common-tab-menu-bar {
+  border: 1px solid $commonFsColorDarkGray;
+  border-left:none;
+  border-right:none;
+  .cube-tab{
+    font-size:0.28rem;
+  }
+  .cube-tab-bar{
+    width:80%;
+    margin-left:auto;
+    margin-right:auto
+  }
+}
+.common-tab-menu-fixed{
+  position: fixed;
+  left:0;
+  top:1.2rem;
+  width:100%;
+  z-index: 1000;
+  background:#2E2E3B
+}
+// iphone 刘海屏
+@media only screen and (device-width: 375px) and (device-height: 812px) and (-webkit-device-pixel-ratio: 3) {
+  .common-tab-menu-fixed{
+    top:1.6rem;
+  }
+}
+@media only screen and (device-width: 414px) and (device-height: 896px) and (-webkit-device-pixel-ratio:3) {
+  .common-tab-menu-fixed{
+    top:1.6rem;
+  }
+}
+@media only screen and (device-width: 414px) and (device-height: 896px) and (-webkit-device-pixel-ratio:2) {
+  .common-tab-menu-fixed{
+    top:1.6rem;
+  }
+}
+// web版tabMenu fix固定样式
+.common-fixed-container-web{
+  top:0.86rem!important;
+}
+//checkbox通用样式
+input.common-radio[type=checkbox]{
+	width: 0.36rem;
+	height: 0.36rem;
+	margin-top: 0;
+	background-color: none;
+	border:none;
+	border-radius: 0.45rem;
+	color: #fff;
+	text-align: center;
+	line-height: 0.45rem;
+	-webkit-appearance:none;
+	-moz-appearance:none;
+	-ms-appearance:none;
+	-o-appearance:none;
+	appearance:none;
+  outline: none;
+  background-image:none;
+  vertical-align: middle;
+  border:1px solid $commonColorBlur;
+}
+input.common-radio[type=checkbox]:checked{
+  color: #fff;
+  background:$commonColorBlur urlPrefix('static/img/commonPage/checkbox_right.png') center center no-repeat;
+  background-size: 80%;
+ }
+ .common-body-space-top{
+  padding-top:0.48rem
+}
+.common-custorm-cube-drawer{
+  .cube-drawer-panels{
+    .cube-drawer-panel{
+      .cube-drawer-item {
+        &::after{
+            display:block;
+        }
+    }
+    }
+  }
+}
+//cube 全局样式
+// cube mask
+.cube-dialog{
+  .cube-popup-mask{
+    background:#000;
+    opacity:0.7
+  }
+  .cube-dialog-title + .cube-dialog-content{
+    margin-top:0
+  }
+  .cube-dialog-content-def{
+    padding:0 $commonSpace2;
+  }
+  .cube-dialog-main{
+    border-radius:0.14rem
+  }
+  .cube-dialog-btn{
+    height:0.86rem;
+    line-height: 0.86rem;
+    padding-top:0;
+    padding-bottom:0;
+    font-size: $commonFsTitleMedium
+  }
+  .cube-dialog-title-def{
+    font-size: $commonFsTitleMedium;
+    font-weight: bold;
+    margin:0;
+    line-height:auto;
+    padding:0.41rem 0 0.2rem 0
+  }
+  .border-top-1px::before{
+      border-top:1px solid $commonBorderColor
+  }
+  .cube-dialog-content-def > p{
+    // display: block!important
+  }
+}
+// 去除input等记住密码默认样式
+input:-webkit-autofill , textarea:-webkit-autofill, select:-webkit-autofill {
+  -webkit-box-shadow: 0 0 0px 1000px $commonBackgroundDark inset;
+  // border: 1px solid $commonBackgroundDark!important;
+  -webkit-text-fill-color:$commonFsColorGray
+}
+.common-loading-container{
+  height: 100vh;
+  width:100vw;
+  background:'#000';
+  opacity: 0.5;
+}
+.cube-btn_disabled::after{
+  border:none!important
+}
+// 按钮不可用
+.common-button-disable {
+  background-color: #ccc;
+  opacity: 0.35;
+  color: #333;
+  -webkit-appearance: none;
+  &:active{
+    background-color: #ccc!important;
+  }
+}
+// 按钮不可用 灰色
+.common-button-disable-grey {
+  background:rgba(235,235,245,0.1)!important;
+  color: #292933!important;
+  font-size:0.32rem;
+  font-weight: bold;
+  -webkit-appearance: none;
+  &:active{
+    background-color: #ccc!important;
+  }
+}
+
+// 神策跟踪按钮样式
+.sensors-track-button{
+  background:none;
+  border:none;
+  color:inherit;
+  display: inline;
+}
+.common-base-button{
+  height:0.92rem;
+  line-height: 0.8rem;
+  border-radius: 6px;
+  font-size:$commonFsContent;
+  width:100%;
+  display: block;
+  &:active{
+    opacity: 0.9;
+  }
+}
+// 按钮
+.common-button-style01{
+  @extend .common-base-button;
+  background:#3385FF;
+  color:#fff;
+  border:none;
+}
+.common-button-style02{
+  @extend .common-base-button;
+  background:none;
+  border:2px solid #3385FF;
+  color:#3385FF;
+  &:active{
+    border:2px solid #3385FF;
+  }
+  &:focus{
+    border:2px solid #3385FF;
+  }
+}
+//圆角
+.common-button-radius-40{
+  border-radius: 0.4rem;
+}
+.common-text-botton{
+  background:none;
+  border:none;
+  display: inline
+}
+body{
+  background:$commonBackgroundDark;
+}
+.common-dialog-swipe-title{
+  font-size:0.36rem;
+  font-family:PingFang-SC-Heavy;
+  font-weight:800;
+  color:rgba(255,255,255,1);
+  line-height:0.36rem;
+  min-height:0.36rem;
+  text-align: center;
+  margin-bottom:0.26rem;
+  margin-top:0.1rem;
+}
+// dialog 滑动
+.score-rate {
+  height:4rem;
+  .num {
+      margin-right:2px
+  }
+  p {
+      margin-bottom: 0.2rem !important;
+      line-height: 0.39rem;
+  }
+  .bottom-info-txt {
+      color: #575766;
+      margin-top: 0.06rem;
+      border-top: 1px solid $commonFsColorDarkGray;
+      padding-top: 0.12rem;
+  }
+}
+// 我的预警通用脚部样式
+.mywarning-footer-info {
+  margin-top:0.24rem;
+  color: $commonFsDarkColor;
+  font-size: $commonFsSmall;
+  line-height: 0.33rem;
+  text-align: center;
+  padding-left:0.28rem;
+  padding-right:0.28rem;
+}
+.mywarning-footer-info-item02{
+  margin-top:0.36rem;
+}
+.common-center{
+  text-align: center
+}
+// cube-ui picker样式修改
+.cube-picker-panel{
+  box-shadow:-1px -8px 8px 2px #030303;
+  .cube-picker-content{
+    .border-bottom-1px,.border-top-1px{
+      background:rgb(46, 46, 59);
+      opacity:0.8;
+    }
+  }
+}
+// cube sheet组件
+.cube-action-sheet-title{
+  font-size:0.24rem!important;
+  color:$commonFsColorGray!important;
+  font-weight:bold
+}
+.cube-action-sheet-space{
+  height:0.16rem!important;
+  background-color: rgba(0,0,0,0.85)!important;
+}
+.cube-action-sheet-cancel{
+  span{
+    font-size:0.36rem!important;
+    font-weight:bold
+  }
+// cube-scroll水平滚动样式
+}
+.horizontal-scroll-list-wrap {
+  .cube-scroll-content {
+      display: inline-block;
+      .list-wrapper {
+          white-space: nowrap;
+          position: relative;
+      }
+      .list-item {
+          display: inline-block;
+      }
+  }
+}
+.cube-tip{
+  background:$commonColorBlur;
+  color:#fff
+}
+.cube-tip-angle{
+  &:before{
+    border-color:transparent transparent $commonColorBlur!important;
+  }
+}
+html,body,#App{
+  // min-height: 100vh;
+}
+// 上涨颜色
+.common-up-color{
+  color:$commonSuccessColor
+}
+// 下跌颜色
+.common-down-color{
+  color:$commonFailColor
+}
+.common-equal-color{
+  color:#EBEBF5
+}
+.common-bottom-fixed{
+  position: fixed;
+  bottom:10px;
+  left:0;
+  width:100%
+}
+.common-layout-back2{
+  background-color:#24242E!important;
+  .common-card-background{
+    background:#292933
+  }
+}
+.common-card-top-line{
+  margin-top:2px;
+}
+.top-for-app{
+  top: 0.4rem;
+}
+.padding-top-for-app{
+  padding-top: 0.4rem;
+}
+.common-img-width{
+  width:100%
+}
+.common-link-txt{
+  color:$commonColorBlur
+}
+.column-sort-default-icon,.column-sort-up-icon,.column-sort-down-icon{
+  display:inline-block;
+  vertical-align: middle;
+  // flex-direction: column;
+  // width:0.2rem;
+  line-height: 8px;
+  &::before{
+    content: "▲";
+    display:block;
+    width:20px;
+    font-size:12px;
+    color:rgba(235,235,245,0.3);
+    transform: scale(0.65)
+  }
+  &::after{
+    content: "▼";
+    display:block;
+    width:20px;
+    font-size:12px;
+    color:rgba(235,235,245,0.3);
+    transform: scale(0.65)
+  }
+}
+.column-sort-up-icon{
+  &::before{
+    color:#fff
+  }
+  &::after{
+    color:rgba(235,235,245,0.3)
+  }
+}
+.column-sort-down-icon{
+  &::before{
+    color:rgba(235,235,245,0.3)
+  }
+  &::after{
+    color:#fff
+  }
+}
+
+.overflow-auto{
+  overflow:auto
+}

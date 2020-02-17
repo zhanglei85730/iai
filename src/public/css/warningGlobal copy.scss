@@ -1,0 +1,235 @@
+@import 'global.scss';
+// 预警
+.flex-box,.common-layout-box{
+    display:flex
+}
+.flex-box-item{
+    flex:1
+}
+.common-layout-box{
+  display:flex;
+  flex-direction: column;
+  height: 100%;
+  flex:1
+}
+.common-layout-top{
+  flex:1
+}
+.common-flex-column-row{
+  display: flex;
+    flex-direction: row;
+    // flex:1;
+    justify-items: center
+}
+.common-layout-bottom{
+  height:2rem;
+}
+@mixin button($width:1.5rem,$height:1rem,$radius: 0.3rem) {
+    border-radius: $radius;
+    width:$width;
+    font-size:$commonFsMedium;
+    height:$height;
+    line-height: $height;
+    color:$commonColorBlur;
+    padding:0 10px;
+}
+//checkbox通用样式
+input.common-radio[type=checkbox]{ 
+	width: 0.36rem;
+	height: 0.0.36rem;
+	margin-top: 0;
+	background-color: none;            
+	border:none;
+	border-radius: 0.36rem;
+	color: #fff;
+	text-align: center;
+	line-height: 0.36rem;
+	-webkit-appearance:none;
+	-moz-appearance:none;
+	-ms-appearance:none;
+	-o-appearance:none;
+	appearance:none;
+  outline: none;
+  background-image:none;
+  vertical-align: middle;
+  border:1px solid $commonColorBlur;
+}
+input.common-radio[type=checkbox]:checked{
+  color: #fff;
+  background:$commonColorBlur url('/static/img/mobile/checkbox_right.png') center center no-repeat;
+  background-size: 80%;
+ }
+ //通用对齐方式
+ .common-ta-l{
+   text-align:left
+ }
+ .common-ta-r{
+  text-align:right
+}
+/*链接颜色*/
+//链接颜色
+a.common-link-blue:link, a.common-link-blue:visited,a.common-link-blue:hover,.common-link-blue{
+  color:$commonColorBlur;
+}
+.common-primary-btn{
+  color:#fff!important;
+  background:$commonColorBlur!important;
+  font-size:0.36rem
+}
+.cube-tab-bar-slider:after {
+  content: ' ';
+  display: block;
+  background: #fdfdfd;
+  height: 2px;
+  width: 36px;
+  text-align: center;
+  margin: 0 auto;
+}
+// cube tab自定义样式
+.cube-tab-bar-slider{
+  background:none!important
+}
+.cube-tab{
+  padding:16px 0!important
+}
+//自定义cube input的样式
+.custom-input {
+  padding-top:0.2rem;
+  border:none!important;
+  outline: none!important;
+  border-bottom:1px solid #5c5c5f!important;
+  background: none!important;
+  overflow:hidden;
+  .cube-input-field {
+      font-size: 0.34rem;
+      color: #9797be;
+  }
+  .custom-input-label{
+    color:#fff;
+    width:1rem;
+    display: inline-block;
+    font-size:$commonFsMedium
+  }
+}
+.custom-input::after {
+  border: none!important;
+}
+//主要颜色
+.common-primary-font-color{
+  color:$commonColorBlur
+}
+//信号跟踪 一键跟单风险提示内容
+.strategy-signal-risk-tip-box{
+  text-align: center;
+}
+.strategy-signal-risk-tip{
+  border:1px solid $commonColorBlur;
+  border-radius: 0.5rem;
+  height:0.6rem;
+  display: inline-block;
+  padding: 0 0.2rem;
+  line-height: 0.6rem;
+  text-align: center;
+  color:$commonColorBlur;
+  margin: 0.2rem 0 0 0
+}
+.mobile-header{
+  background:#2E2E3B
+}
+.common-header-right-icon{
+  height:0.44rem;
+  margin-top:0.2rem
+}
+// tab菜单 滚动调滚动固定
+.common-tab-menu-fixed{
+  position: fixed;
+  // top:1.2rem;
+  left:0;
+  width:100%;
+  z-index: 1000;
+  background:#2E2E3B
+}
+.common-fixed-container{
+  // padding-top:1rem;
+}
+/**/
+.common-head-ad-box{
+  text-align: center;
+  min-height: 1rem;
+  color:#8B8E99;
+  img{
+    width:100%;
+    border-radius: $commonRadius;
+    display: block
+  }
+}
+.common-layout-back{
+  .cubeic-back,.header-left{
+    color:$commonColorBlur
+  }
+  .header-back-btn-word{
+    color:$commonColorBlur
+  }
+}
+// 顶部tab选项卡
+.tab-custom-box {
+  margin: 0.2rem 0.4rem 0;
+  display: flex;
+  .tab-custom-item {
+      flex: 1;
+      border: $commonBorderWidth solid #5291ff;
+      height: 0.48rem;
+      color: #5291ff;
+      text-align: center;
+      line-height: 0.48rem;
+      font-size: $commonFsSmall;
+      // border:none;
+      outline: none;
+      background:none;
+      padding:0;
+      display: block
+  }
+  .first-child {
+      border-right: none;
+      margin-right:0;
+      border-top-left-radius:0.06rem;
+      border-bottom-left-radius: 0.06rem;
+  }
+  .current {
+      background: #5291ff;
+      color: #15182c;
+  }
+  .last-child {
+      border-left: none;
+      margin-left:0;
+      border-top-right-radius: 0.06rem;
+      border-bottom-right-radius: 0.06rem;
+  }
+}
+// 头部背景
+.page-layout header {
+  background: none !important;
+}
+.common-custorm-cube-drawer .cube-drawer-main .cube-drawer-panels .cube-drawer-panel{
+  background-color:#2e2e3b
+}
+// cube-ui
+.cube-dialog-main{
+  // width:310px!important
+}
+.cube-dialog-btn{
+  font-weight: bold
+}
+//
+.warning-author-pop{
+  .common-popup-content{
+    // padding-bottom:1rem;
+  }
+  .cube-popup-mask{
+    opacity: 0.6;
+    background:#000
+  }
+  .common-popup-container .last-input-box{
+    // border-bottom:none
+  }
+}

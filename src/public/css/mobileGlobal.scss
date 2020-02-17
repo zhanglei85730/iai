@@ -1,0 +1,136 @@
+@import 'global.scss';
+// 移动站样式
+.flex-box,.common-layout-box{
+    display:flex
+}
+.flex-box-item{
+    flex:1
+}
+.common-layout-box{
+  display:flex;
+  flex-direction: column;
+  height: 100%;
+  flex:1
+}
+.common-layout-top{
+  flex:1
+}
+.common-flex-column-row{
+  display: flex;
+    flex-direction: row;
+    flex:1
+}
+.common-layout-bottom{
+  height:2rem;
+}
+@mixin button($width:1.5rem,$height:1rem,$radius: 0.3rem,$fontsize:$commonFsSmall) {
+    border-radius: $radius;
+    width:$width;
+    font-size:$fontsize;
+    height:$height;
+    line-height: $height;
+    color:$commonColorBlur;
+    padding:0 0.1rem;
+}
+ //通用对齐方式
+ .common-ta-l{
+   text-align:left
+ }
+ .common-ta-r{
+  text-align:right
+}
+/*链接颜色*/
+//链接颜色
+a.common-link-blue:link, a.common-link-blue:visited,a.common-link-blue:hover,.common-link-blue{
+  color:$commonColorBlur;
+}
+.common-primary-btn{
+  color:#fff!important;
+  background:$commonColorBlur!important;
+  height:0.92rem!important;
+  line-height: 0.92rem!important;
+  font-weight: bold;
+  border-radius: 0.06rem!important;
+  padding:0!important;
+  font-size:0.36rem!important
+}
+
+.cube-tab{
+  padding:16px 0!important
+}
+//自定义cube input的样式
+.custom-input {
+  // padding-top:0.2rem;
+  border:none!important;
+  outline: none!important;
+  height:1rem;
+  line-height:1rem!important; 
+  border-bottom:1px solid $commonFsColorDarkGray!important;
+  background: none!important;  
+  .cube-input-field {
+      font-size: 0.34rem;
+      color: #9797be;
+  }
+  .custom-input-label{
+    color:#fff;
+    width:0.64rem;
+    display: inline-block;
+    font-size:$commonFsContent
+  }
+}
+.custom-input::after {
+  border: none!important;
+}
+//主要颜色
+.common-primary-font-color{
+  color:$commonColorBlur
+}
+//信号跟踪 一键跟单风险提示内容
+.strategy-signal-risk-tip-box{
+  text-align: center;
+}
+.strategy-signal-risk-tip{
+  border:1px solid $commonColorBlur;
+  border-radius: 0.5rem;
+  height:0.6rem;
+  display: inline-block;
+  padding: 0 0.2rem;
+  line-height: 0.6rem;
+  text-align: center;
+  color:$commonColorBlur;
+  margin: 0.2rem 0 0 0
+}
+.mobile-header{
+  background:#2E2E3B
+}
+.common-header-right-icon{
+  height:0.5rem;
+  // margin-top:0.5rem
+}
+
+// // 通用输入框
+// .common-input-box{
+//   border-bottom:1px solid #5c5c5f;
+//   display: flex;
+//   font-size:0.3rem;
+//   margin-bottom:0.3rem;
+//   .common-input-label{
+//     padding: 10px;
+//     padding-left:0;
+//     color:#fff;
+//     min-width: 1rem;
+//     display: block;
+//   }
+//   .common-input-right{
+//     flex:1
+//   }
+//   .common-input{
+//     padding: 10px;
+//     width: 100%;
+//     outline: none;
+//     box-sizing: border-box;
+//     display: block;
+//     background: none;
+//     color:#9797be
+//   }
+// }

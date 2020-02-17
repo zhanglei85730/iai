@@ -1,0 +1,1 @@
+1、此文件夹下的js文件要用 require的方式调用，vue下除开static下的js文件可以用import的方式引入

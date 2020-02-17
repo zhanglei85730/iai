@@ -1,0 +1,44 @@
+// 覆盖样式放末尾
+//sheet
+@import 'global.scss';
+.price-sheet-select {
+    .price-sheet-value {
+        font-size: $commonFsContent;
+        color: #fff;
+    }
+    .price-sheet-sub {
+        color: #8b8e99;
+        font-size: 0.22rem;
+        margin-top: 0.08rem;
+    }
+}
+.warning-sheet {
+    .cube-action-sheet-title {
+        img {
+            width: 0.32rem;
+            height: 0.32rem;
+            vertical-align: middle;
+            position: relative;
+            top: -2px;
+            left: 0.08rem;
+        }
+    }
+    .cube-action-sheet-item_active {
+        .price-sheet-value {
+            color: #5291ff;
+        }
+    }
+}
+.warning-input-icon-focus {
+    .cube-tip-close {
+        display: none !important;
+    }
+    .cube-tip {
+        padding-right: 10px !important;
+    }
+}
+.my-warning-layout{
+    .page-layout-body{
+        overflow-y: auto!important;
+    }
+}
